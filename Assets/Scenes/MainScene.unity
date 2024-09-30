@@ -239,6 +239,10 @@ GameObject:
   - component: {fileID: 625150865}
   - component: {fileID: 625150864}
   - component: {fileID: 625150869}
+<<<<<<< Updated upstream
+=======
+  - component: {fileID: 625150870}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -372,7 +376,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveValue: {x: 0, y: 0}
+<<<<<<< Updated upstream
   speed: 0
+=======
+  speed: 500
+--- !u!114 &625150870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625150863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 224d194fa7307423189a4df7f26e4f59, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: 
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 1505840038}
+>>>>>>> Stashed changes
 --- !u!1 &751462192
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,7 +656,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 273699fd734393b4483308f168e9e93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   player: {fileID: 0}
+=======
+  player: {fileID: 625150863}
+>>>>>>> Stashed changes
 --- !u!1 &1520861089
 GameObject:
   m_ObjectHideFlags: 0
