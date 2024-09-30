@@ -12,16 +12,17 @@ public class GameController : MonoBehaviour
     void Start(){
         lineRenderer = gameObject.AddComponent<LineRenderer>();
         GameObject[] pickups = GameObject.FindGameObjectsWithTag("PickUp");
-
-        for(int i=0; i<pickups.Length; i++) {
-            pickups[i].GetComponent<Renderer>().material.color = Color.blue;
-        }
-
     }
 
     void FixedUpdate(){
-
         GameObject closestPickup = FindClosestActivePickup();
+
+        GameObject[] pickups = GameObject.FindGameObjectsWithTag("PickUp");
+        for(int i=0; i<pickups.Length; i++)
+        {
+            pickups[i].GetComponent<Renderer>().material.color = Color.white;
+        }
+        closestPickup.GetComponent<Renderer>().material.color = Color.blue;
 
 
         if (closestPickup != null){
