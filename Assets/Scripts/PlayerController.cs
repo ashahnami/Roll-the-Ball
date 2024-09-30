@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     void OnMove(InputValue value)
     {
+        System.Console.WriteLine(value);
         moveValue = value.Get<Vector2>();
     }
 
