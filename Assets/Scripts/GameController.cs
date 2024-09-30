@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+
+
+    public DebugMode debugMode = DebugMode.Normal;
     private LineRenderer lineRenderer;
     public Transform player;
     public float detectionRadius = 20f; 
@@ -23,13 +26,26 @@ public class GameController : MonoBehaviour
 
         GameObject closestPickup = FindClosestActivePickup();
 
-
-        if (closestPickup != null){
+        if (closestPickup != null && debugMode != DebugMode.Normal){
             lineRenderer.SetPosition(0, player.position);
             lineRenderer.SetPosition(1, closestPickup.transform.position);
         }
         else{
             lineRenderer.enabled = false;
+        }
+    }
+
+    void SwitchDebugMode(){
+        switch (debugMode){
+            case DebugMode.Normal:
+                debugMode = DebugMode.Distance;
+                break;
+            case DebugMode.Distance:
+                debugMode = DebugMode.Vision;
+                break;
+            case DebugMode.Vision:
+                debugMode = DebugMode.Normal;
+                break;
         }
     }
 
