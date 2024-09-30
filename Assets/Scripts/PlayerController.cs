@@ -13,6 +13,10 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI winText;
 
+    public TextMeshProUGUI posText;
+
+    public TextMeshProUGUI velText;
+
     void Start()
     {
         count = 0;
@@ -30,7 +34,16 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 movement = new Vector3(moveValue.x, 0.0f, moveValue.y);
 
-        GetComponent<Rigidbody>().AddForce(movement * speed * Time.fixedDeltaTime);
+        var rb = GetComponent<Rigidbody>();
+        rb.AddForce(movement * speed * Time.fixedDeltaTime);
+
+        Vector3 playerPosition = rb.position;
+        posText.text = "Position: " + playerPosition.ToString();
+
+        // Log and display the player's velocity
+        Vector3 playerVelocity = rb.velocity;
+        velText.text = "Velocity: " + playerVelocity.ToString();
+
     }
 
     void OnTriggerEnter(Collider other)
